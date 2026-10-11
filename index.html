@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="DK Shop — catálogo de Robux com pedidos simples pelo WhatsApp.">
+  <title>DK Shop | Robux</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="DK Shop início"><span>DK</span><small>SHOP</small></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#inicio">Início</a><a href="#catalogo">Catálogo</a><a href="#como-funciona">Como funciona</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="nav-cta" href="#catalogo">Ver ofertas <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> LOJA DIGITAL • ATENDIMENTO PELO WHATSAPP</p>
+        <h1>Seu próximo nível<br>começa com <span>Robux.</span></h1>
+        <p class="hero-text">Escolha seu pacote, informe seu nick e fale com a DK Shop. Um processo simples, direto e pensado para celular.</p>
+        <div class="hero-actions"><a class="button primary" href="#catalogo">Ver pacotes <span>→</span></a><a class="button ghost" href="#como-funciona">Como comprar</a></div>
+        <div class="trust-row"><span>✓ Pedido fácil</span><span>✓ Atendimento humano</span><span>✓ Confirmação antes da entrega</span></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração de destaque da loja">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="robux-coin"><span>R</span><i>✦</i></div>
+        <div class="float-tag tag-top">DK / DIGITAL STORE</div><div class="float-tag tag-bottom">POWER UP YOUR GAME</div>
+        <div class="hero-glow"></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Vantagens"><span>DK SHOP</span><b>✦</b> ROBUX <b>✦</b> PEDIDO PELO WHATSAPP <b>✦</b> ATENDIMENTO DIRETO <b>✦</b> DK SHOP</section>
+
+    <section class="catalog section" id="catalogo">
+      <div class="section-heading"><div><p class="eyebrow">ESCOLHA SEU PACOTE</p><h2>Catálogo <span>Robux</span></h2></div><p class="heading-note">Selecione uma opção para montar seu pedido.</p></div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="price-note">Os valores e a disponibilidade devem ser confirmados no atendimento antes do pagamento. A entrega depende de um método permitido e disponível para sua conta.</p>
+    </section>
+
+    <section class="how section" id="como-funciona">
+      <div class="section-heading"><div><p class="eyebrow">SEM COMPLICAÇÃO</p><h2>Como <span>funciona</span></h2></div></div>
+      <div class="steps">
+        <article><b class="step-no">01</b><div class="step-icon">▦</div><h3>Escolha o pacote</h3><p>Compare as quantidades e selecione a opção que deseja.</p></article>
+        <article><b class="step-no">02</b><div class="step-icon">⌁</div><h3>Informe seu nick</h3><p>Digite seu nome de usuário Roblox para incluir no pedido.</p></article>
+        <article><b class="step-no">03</b><div class="step-icon">↗</div><h3>Converse no WhatsApp</h3><p>Revise os detalhes e aguarde a confirmação do atendimento antes de pagar.</p></article>
+      </div>
+    </section>
+
+    <section class="order-banner" id="contato"><div><p class="eyebrow">PRECISA DE AJUDA?</p><h2>Vamos montar seu pedido.</h2><p>Chame a DK Shop e confirme valores, prazo e método de entrega.</p></div><a class="button primary" id="generalWhatsapp" href="#">Chamar no WhatsApp <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#inicio"><span>DK</span><small>SHOP</small></a><p>© <span id="year"></span> DK Shop. Confira os detalhes do pedido antes de concluir.</p><a href="#inicio">Voltar ao topo ↑</a></footer>
+
+  <dialog id="orderDialog">
+    <form method="dialog" id="orderForm">
+      <button class="close" aria-label="Fechar">×</button>
+      <p class="eyebrow">MONTAR PEDIDO</p><h2 id="dialogTitle">Pacote Robux</h2>
+      <p class="dialog-price" id="dialogPrice"></p>
+      <label for="robloxNick">Seu nick do Roblox <span>*</span></label>
+      <input id="robloxNick" name="robloxNick" placeholder="Digite seu nome de usuário" required maxlength="40" autocomplete="off">
+      <label for="customerNote">Observação (opcional)</label>
+      <textarea id="customerNote" name="customerNote" placeholder="Ex.: dúvidas sobre entrega" rows="2" maxlength="250"></textarea>
+      <p class="fineprint">Não informe senha nem códigos de acesso. O pedido será enviado ao WhatsApp para confirmação manual.</p>
+      <button class="button primary submit" type="submit">Continuar no WhatsApp ↗</button>
+    </form>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
